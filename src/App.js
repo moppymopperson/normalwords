@@ -78,7 +78,11 @@ class App extends Component<Props> {
           }
         />
         <div className="plotlabel">
-          {this.histogramType === 'words' ? 'Word Length' : 'Sentence Length'}
+          {this.state.histogramType === 'words' ? (
+            'Word Length'
+          ) : (
+            'Sentence Length'
+          )}
         </div>
       </div>
     )
