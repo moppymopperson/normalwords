@@ -73,7 +73,7 @@ function makeHistogram(counts: Array<number>): Array<DataPoint> {
     datapoints.push({
       bin: k,
       count: 0,
-      label: String(k)
+      label: '0'
     })
   }
 
@@ -84,6 +84,10 @@ function makeHistogram(counts: Array<number>): Array<DataPoint> {
     } else {
       console.warn('no bin was found for data point', datapoint, datapoints)
     }
+  }
+
+  for (let point of datapoints) {
+    point.label = `${point.count}`
   }
   return datapoints
 }
