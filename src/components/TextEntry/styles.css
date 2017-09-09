@@ -1,0 +1,26 @@
+.padded {
+  padding: 40px;
+}
+
+.rounded {
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: 10px 10px 0px rgb(171, 80, 74);
+}
+
+textarea {
+  flex: 1;
+  flex-shrink: 1;
+  resize: none;
+  background-color: rgb(236, 236, 236);
+  color: rgb(38, 38, 38);
+  padding: 40px;
+  margin: 10px;
+}
+
+.segmented-control {
+  flex-shrink: 0;
+  color: rgb(171, 80, 74);
+  background-color: rgb(236, 236, 236);
+  box-shadow: 5px 5px 5px rgb(171, 80, 74);
+}
