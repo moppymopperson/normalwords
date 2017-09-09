@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import './App.css'
 
 import { BarChart, TextEntry } from './components'
@@ -97,6 +96,9 @@ class App extends Component<Props> {
 
       case 'sentences':
         return createSentenceLengthHistogram(text)
+
+      default:
+        return []
     }
   }
 }

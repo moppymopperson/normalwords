@@ -1,13 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import {
-  VictoryChart,
-  VictoryAxis,
-  VictoryBar,
-  VictoryTheme,
-  VictoryTooltip
-} from 'victory'
+import { VictoryChart, VictoryAxis, VictoryBar, VictoryTooltip } from 'victory'
 
 import type { DataPoint } from '../../analyzer'
 
@@ -33,7 +27,7 @@ export default class BarChart extends Component<Props> {
           y="count"
           style={{
             data: {
-              width: chartWidth / (this.props.data.length * 2),
+              width: 20,
               padding: 0
             }
           }}
@@ -55,5 +49,9 @@ export default class BarChart extends Component<Props> {
       ticks.push(k)
     }
     return ticks
+  }
+
+  barWidth(): number {
+    return (chartWidth - 40) / this.props.data.length
   }
 }
